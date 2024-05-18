@@ -6,7 +6,8 @@ class Features{
   String team;
   String value;
   int reyting;
+  String career;
 
 
-  Features( this.name,this.surname,this.photo,this.age,this.team,this.value,this.reyting);
+  Features( this.name,this.surname,this.photo,this.age,this.team,this.value,this.reyting,this.career);
 }

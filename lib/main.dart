@@ -36,12 +36,12 @@ class _MyHomePageState extends State<MyHomePage> {
 
   Future<List<Features>> showFeatures() async {
     var list = <Features>[];
-    var s1 = Features("Lionel", "Messi", "photos/messi.png", 38, "Miami FC", "30.00 mil. €",90);
-    var s2 = Features("Erling", "Haaland", "photos/halland.png", 23, "M.City","180.00 mil. €",91);
-    var s3 = Features("Neymar", "Silva Santos", "photos/neymar.png", 32, "AL Hilal", "45.00 mil. €",88);
-    var s4 = Features("Cristiano", "Ronaldo", "photos/ronaldo.png", 39, "Al Nassr", "15.00 mil. €",86);
-    var s5 = Features("Kylian", "Mbappe", "photos/mbappe.png", 25, "PSG", "180.00 mil. €",91);
-    var s6 = Features("Edinson", "Cavani", "photos/cavani.png", 37, "Boca ", "1.00 mil. €",79);
+    var s1 = Features("Lionel", "Messi", "photos/messi.png", 38, "Miami FC", "30.00 mil. €",90,"Lionel Andrés Messi (d. 24 Haziran 1987, Rosario), ayrıca Leo Messi olarak da bilinir, Major League Soccer takımlarından Inter Miami'de forma giyen ve Arjantin millî takımının kaptanlığını yapan Arjantinli futbolcudur.");
+    var s2 = Features("Erling", "Haaland", "photos/halland.png", 23, "M.City","180.00 mil. €",91,"21 Temmuz 2000; Leeds, İngiltere) Norveçli futbolcu. Premier League takımlarından Manchester City'de forma giymektedir. Genellikle dünyanın en iyi genç futbolcularından biri olarak gösterilen Haaland; üretken bir golcü olan hızı, atletizmi, gücü ve topsuz alandaki hareketliliğiyle dikkat çekmektedir.");
+    var s3 = Features("Neymar", "Silva Santos", "photos/neymar.png", 32, "AL Hilal", "45.00 mil. €",88,"Neymar da Silva Santos Júnior ya da bilinen adıyla Neymar 05.02.1992 doğumludur. Forvet ve sol açık mevkilerinde görev yapan Brezilyalı futbolcudur. Şu an La Liga ekiplerinden Barcelona'da 11 numaralı formayı giymektedir. 2009 Campeonato Paulista'da Yılın Genç Futbolcusu ödülünün sahibi olmuştur.");
+    var s4 = Features("Cristiano", "Ronaldo", "photos/ronaldo.png", 39, "Al Nassr", "15.00 mil. €",86,"Cristiano Ronaldo dos Santos Aveiro (d. 5 Şubat 1985, Funchal, Madeira), Suudi Profesyonel Ligi takımlarından En-Nasr'da forma giyen ve Portekiz millî takımının kaptanlığını yapan Portekizli futbolcudur.");
+    var s5 = Features("Kylian", "Mbappe", "photos/mbappe.png", 25, "PSG", "180.00 mil. €",91,"Kylian Mbappé Lottin (Fransızca telaffuz: [kiljan (ə)mbape]; 20 Aralık 1998, Paris) Fransa millî futbol takımında sol kanat ve santrafor olarak forma giyen Fransız futbolcudur.");
+    var s6 = Features("Edinson", "Cavani", "photos/cavani.png", 37, "Boca ", "1.00 mil. €",79,"Edinson Roberto Cavani Gómez (d. 14 Şubat 1987, Salto) Uruguaylı millî futbolcudur. Primera División (Arjantin) ekiplerinden Boca Juniors'da forma giymektedir. Lakabı 'El Matador' dur.");
 
     list.add(s1);
     list.add(s2);
@@ -78,7 +78,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
                 return SizedBox(width: ekrangenislik/50,height: ekranyukseklik/5,
                   child: GestureDetector(onTap: (){
-                    Navigator.push(context, MaterialPageRoute(builder: (context)=>Detail()));
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=>Detail(detail_photo: "${listt.photo}", detail_name: "${listt.name}", detail_surname: "${listt.surname}", detail_career: "${listt.career}")));
 
                   },
                     child: Card(
